@@ -1,0 +1,14 @@
+{{ greeting }}
+
+Por favor sincronizar los siguientes archivos en {{ environment }} para el {{ task }}.
+De la rama {{ branch }}.
+
+Se modificaron los siguientes artefactos:
+
+{% if files %}{% for file in files %}- {{ file }}
+{% endfor %}{% else %}- Azure DevOps no devolvió archivos modificados.
+{% endif %}
+Commit: {{ merge_commit }}
+
+Pull Request {{ pr_id }}: {{ pr_url }}
+

@@ -1,0 +1,18 @@
+organization: mi-organizacion
+
+repositories:
+  - project: MiProyecto
+    repository: UtilidadesNomina
+  - project: MiProyecto
+    repository: UtilidadesComunes
+
+# Se busca primero en la rama y después en el título del PR.
+task_pattern: "(?i)(task\\d+)"
+
+# Opcional: cambia el nombre de una rama destino en el texto del correo.
+environment_aliases:
+  planeada: planeada
+
+email:
+  greeting: "Buen día"
+
